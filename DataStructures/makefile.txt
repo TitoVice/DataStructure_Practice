@@ -1,0 +1,17 @@
+main: main.o Songs.o Song.o myexception.o
+	g++ main.o Songs.o Song.o myexception.o -o main
+	
+main.o: main.cpp
+	g++ -c main.cpp
+	
+Songs.o: Songs.cpp
+	g++ -c Songs.cpp
+	
+Song.o: Song.cpp
+	g++ -c Song.cpp
+	
+myexception.o: myexception.cpp
+	g++ -c myexception.cpp
+	
+clean: 
+	rm *.o
